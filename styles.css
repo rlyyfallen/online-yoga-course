@@ -11,28 +11,63 @@ body {
 }
 
 header {
-  background-color: #ffae42;
-  padding: 20px;
+  position: relative;
+  background-image: url('https://via.placeholder.com/1500x600');
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   text-align: center;
 }
 
-h1 {
+.hero {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+.hero-button {
+  background-color: #ff7f00;
   color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffae42;
+}
+
+nav {
+  background-color: #ffae42;
+  padding: 15px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  display: inline-block;
   margin: 0 15px;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
@@ -60,8 +95,21 @@ main {
   to { opacity: 1; }
 }
 
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
 .book-button {
-  background-color: #ffae42;
+  background-color: #ff7f00;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -71,7 +119,7 @@ main {
 }
 
 .book-button:hover {
-  background-color: #ff7f00;
+  background-color: #ffae42;
 }
 
 footer {
@@ -79,14 +127,23 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
 }
 
 @media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-grid img {
+    width: 100%;
   }
 }
